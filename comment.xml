@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lists>
+	<total>4</total>
+	<comment num="4">
+		<name>이순신</name>
+		<content>장군</content>
+		<created>2020-09-14</created>
+	</comment>
+	<comment num="3">
+		<name>허준</name>
+		<content>의사</content>
+		<created>2020-05-14</created>
+	</comment>
+	<comment num="2">
+		<name>승민</name>
+		<content>응가</content>
+		<created>2020-02-14</created>
+	</comment>
+	<comment num="1">
+		<name>홍길동</name>
+		<content>산적</content>
+		<created>2020-03-10</created>
+	</comment>
+</lists>

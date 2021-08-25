@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XML파싱</title>
+
+<script type="text/javascript">
+
+	var xmlDoc= new ActiveXObject("Msxml2.DOMDocument");
+	xmlDoc.load("book.xml");
+	
+	function printNodeItem(){
+		//var root= xmlDoc.getElementsByTagName("booklist")[0];
+		var root= xmlDoc.documentElement;
+		var books= root.getElementsByTagName("book");
+		
+		var out="";
+		
+		for(var i=0; var<boos.length;i++){
+			out +="\n분류 : "+books[i].getAttribute("kind")
+			+ "제목:" +books[i].getElementsByTagName("title")[0].firstChild.codeValue;
+			+"저자 :" +books[i].getElementsByTagName("author")[0].firstChild.codeValue;
+			+"가격 :" +books[i].getElementsByTagName("price")[0].firstChild.codeValue;
+		}
+		
+		alert(out);
+		
+	}
+
+	function insert(){
+		var root= xmlDoc.documentElement;
+		var books= root.getElementsByTagName("book")[0];
+		
+		book.setAttribute("year","2021");
+		
+		var node= xmlDoc.createElement("출판사");
+		var text= xmlDoc.createTextNode("우리 출판사");
+		book.appendChild(node);
+		book.appendChild(text);
+		
+		alert(xmlDoc.xml);
+		
+		
+		
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<input type="button" value="노드출력" onclick="printNodeItem()";>
+	<input type="button" value="추가" onclick="insert()";>
+
+
+</body>
+</html>
